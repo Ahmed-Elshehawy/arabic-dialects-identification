@@ -70,8 +70,7 @@ app.layout = html.Div(children=[
             id='model-type',
             options=[
                 {'label': 'LSTM Model', 'value': 'lstm'}, 
-                {'label': 'ML Model', 'value': 'ml'},
-                {'label': 'BERT Model', 'value': 'bert'}
+                {'label': 'ML Model', 'value': 'ml'}
                 ],
             placeholder='Select Model',
             style={'width': '100%', 'fontsize': '20px', 
