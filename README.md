@@ -26,8 +26,10 @@ To run the app, you have 2 options:
     - to stop the app: run docker `stop <your container name>`
 
 ## After running app (it may take some time to start):
-- you can upload any csv file (*must have column called "text"*), you can test it using `sample.csv` file in this repo
+- you can upload any csv file (*must have column called "text"*), feel free to use `sample.csv` file in this repo
 - select the model you want
+- the model will start to make predictions (based on no stemming data pipeline) and store them in a dataframe
+- then the app will use this dataframe to display a plot showing how the frequncy of each dialect
 - a plot with dialect cout will appear on the screen, 
 - you can download a csv file `result.csv` containing 2 columns 
     - text: the original text
