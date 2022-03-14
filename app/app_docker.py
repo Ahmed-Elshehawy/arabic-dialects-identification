@@ -16,13 +16,14 @@ import io
 warnings.filterwarnings("ignore")
 
 
-vocab_to_int_no_stem = nh.load_pickle_file('arabic-dialects-identification/no_stem/vocab_to_int_no_stem.obj')
-int_to_vocab_no_stem = nh.load_pickle_file('arabic-dialects-identification/no_stem/int_to_vocab_no_stem.obj')
-int_to_labels = nh.load_pickle_file('arabic-dialects-identification/int_to_labels.obj')
+root = 'arabic-dialects-identification/app/'
+vocab_to_int_no_stem = nh.load_pickle_file(root+'no_stem/vocab_to_int_no_stem.obj')
+int_to_vocab_no_stem = nh.load_pickle_file(root+'no_stem/int_to_vocab_no_stem.obj')
+int_to_labels = nh.load_pickle_file(root+'int_to_labels.obj')
 
 ############################### Load lstm model no stem ############################
 use_cuda = torch.cuda.is_available()
-weighths_path = 'arabic-dialects-identificationno_stem/models/best_model.pt'
+weighths_path = root+'no_stem/models/best_model.pt'
 vocab_size = len(vocab_to_int_no_stem) + 1
 output_size = len(int_to_labels)
 embedding_dim = 400
