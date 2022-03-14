@@ -97,8 +97,8 @@ def load_lstm_model(weights_path, vocab_size, output_size, embedding_dim, hidden
     return model  
     
 
-def load_ml_model():
-    path = 'no_stem/models/pipe_rf_20.obj'
+def load_ml_model(path):
+    #path = 'no_stem/models/pipe_rf_20.obj'
     model_ml = nh.load_pickle_file(path)
     return model_ml
     
