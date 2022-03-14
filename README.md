@@ -6,7 +6,7 @@ some of them are similar and some are totally different.
 In this repo I've created 2 machine learning models (LSTM model, and a pipeline of a TFIDF Victorizer and a Random Forest) to classify 18 dialects.   
 
 
-To be able to run the app and the notebooks, you should have [`daar`]("https://pypi.org/project/daar/"), a tiny package  I've created especially for this task, you can install it with all other packages using `pip install -r requirements.txt`
+To be able to run the app and the notebooks, you should have [`daar`]("https://pypi.org/project/daar/"), a tiny package  I've created especially for this task(original files are in helpers folder), you can install it with all other packages using `pip install -r requirements.txt`
 
 To run the app, you have 2 options:
 - Option_1:
