@@ -29,9 +29,9 @@ To run the app, you have 2 options:
 - you can upload any csv file (*must have column called "text"*), feel free to use `sample.csv` file in this repo
 - select the model you want
 - the model will start to make predictions (based on no stemming data pipeline) and store them in a dataframe
-- then the app will use this dataframe to display a plot showing how the frequncy of each dialect
+- then the app will use this dataframe to display a plot showing the frequncy of each dialect
 - a plot with dialect cout will appear on the screen, 
-- you can download a csv file `result.csv` containing 2 columns 
+- by clicking `Download result` button, you can download a csv file `result.csv` containing 2 columns 
     - text: the original text
     - pred_dialect: the predicted dialect
 - also, you can download the plot by hovering it and click download
