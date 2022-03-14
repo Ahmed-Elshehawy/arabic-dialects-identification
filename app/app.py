@@ -1,4 +1,6 @@
 # import required libraries
+import daar.lstm_helpers as lh
+import daar.nlp_helpers as nh
 import pandas as pd
 import dash
 import torch
@@ -8,7 +10,6 @@ from dash.dependencies import Input, Output, State
 import plotly.express as px
 import dash_daq as daq
 import app_helpers as ah
-import nlp_helpers as nh
 import warnings
 import base64
 import io
@@ -21,7 +22,7 @@ int_to_labels = nh.load_pickle_file('int_to_labels.obj')
 
 ############################### Load lstm model no stem ############################
 use_cuda = torch.cuda.is_available()
-weighths_path = 'no_stem/models/model.pt'
+weighths_path = 'no_stem/models/best_model.pt'
 vocab_size = len(vocab_to_int_no_stem) + 1
 output_size = len(int_to_labels)
 embedding_dim = 400
@@ -170,7 +171,7 @@ def update_output(content, inp_text, model_type, n_clicks, name, date):
 
             df_uploaded = parse_content(content, name)
             
-            data = ah.preprocess_data_no_stem(df_uploaded.head(500), 3)
+            data = ah.preprocess_data_no_stem(df_uploaded, 3)
             if model_type == 'lstm':
                 features_tensor = ah.prepare_data_lstm(data, vocab_to_int_no_stem, seq_length=seq_length)
                 pred = ah.predict_lstm(model_lstm_no_stem, features_tensor, use_cuda)
