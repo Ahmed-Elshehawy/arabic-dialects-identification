@@ -1,5 +1,5 @@
-from dialect_helpers_ar import lstm_helpers as lh
-from dialect_helpers_ar import nlp_helpers as nh
+import daar.lstm_helpers as lh
+import daar.nlp_helpers as nh
 import nltk
 from nltk.corpus import stopwords
 import numpy as np
@@ -7,7 +7,7 @@ import torch
 
 
 
-#nltk.download('stopwords')
+nltk.download('stopwords')
 arabic_stopwords = stopwords.words('arabic')
 arabic_stopwords = set(map(nh.remove_tashkeel, arabic_stopwords))
 arabic_stopwords = set(map(nh.normalize_text, arabic_stopwords))
