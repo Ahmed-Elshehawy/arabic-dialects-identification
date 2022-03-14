@@ -33,8 +33,9 @@ drop_prob = 0.5
 
 model_lstm_no_stem = ah.load_lstm_model(weighths_path, vocab_size, output_size, embedding_dim,
                                         hidden_dim, n_layers, seq_length, drop_prob, use_cuda)
-                                        
-#model_ml_no_stem = ah.load_ml_model()                                        
+                         
+ml_path = 'no_stem/models/pipe_rf_20.obj'    
+model_ml_no_stem = ah.load_ml_model()                                        
 
 
 app = dash.Dash(name='Arabic_Dialect_Classification')
