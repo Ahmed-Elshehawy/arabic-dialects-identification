@@ -1,0 +1,12 @@
+numpy
+pandas
+sklearn
+torch
+dash
+dash-core-components
+dash-html-components
+dash-daq
+plotly
+nltk
+daar==0.0.3
+tqdm
